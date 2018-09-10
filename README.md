@@ -31,3 +31,9 @@ ForEach($file in (Get-ChildItem -File -recurse -Path 'C:\windows' -Filter *.dll 
    
    }
 ```
+
+
+___
+
+
+I have only tested this on Windows 10, in theory it should work on other versions.
