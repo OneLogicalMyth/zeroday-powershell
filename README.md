@@ -10,6 +10,7 @@ This will exploit the Windows operating system allowing you to modify the file S
 Set-ExecutionPolicy Bypass Process
 .\example.ps1
 ```
+https://youtu.be/rNSpxJd3_BM
 # Finding Vulnerable DLL files
 ```
 $aapsid = 'NT AUTHORITY\SYSTEM'
