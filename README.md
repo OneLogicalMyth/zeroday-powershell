@@ -6,8 +6,6 @@ Set-ExecutionPolicy Bypass Process
 This will exploit the Windows operating system allowing you to modify the file Some.dll.
 
 # Example
-This isn't fully working yet due to the API calls for the XPS printer appearing to be only support using c++.
-I have managed to work around this by using the `System.Printing`, however, the exploit is launched in the current user context and not under the spooler.
 ```
 Set-ExecutionPolicy Bypass Process
 .\example.ps1
