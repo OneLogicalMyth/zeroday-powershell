@@ -36,6 +36,8 @@ The first PoC was released by [@SandboxEscaper](https://twitter.com/sandboxescap
 The exploit.dll and the code for the TriggerXPSPrint.cpp comes from her original PoC. The exploit.dll simply launches notepad.
 I tried to replicate the XPS print api into C# but using `System.Printing` or `System.Drawing.Printing` only calls the print job within the current user context, you need to use the API to get the spooler service to initate the print job.
 
+The actual exploit process is the native hardlink and using the `Schedule.Service` COM object to execute the method `SetSecurityDescriptor`. This then overwrites the permissions on the hardlinked file thus also updating the DACL on the targetted file. The `example.ps1` is purely an instance of how you could use this exploit to replace a SYSTEM level service dll file. In this case it was the XPS printer, but it could also be an executable stored within `C:\Program Files` for example. 
+
 This was patched by Microsoft on the 11th September 2018. The following link has the relevant KB numbers:
 https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2018-8440
 
